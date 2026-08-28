@@ -42,11 +42,11 @@ This project provided hands-on experience with password hashes, password-crackin
 A password-protected PDF was used as the target file in the authorized lab environment. The PDF was uploaded to an online hash-extraction utility to obtain the `$pdf$` password hash required by John the Ripper.
 
 <p align="center">
-  <img src="images/01-hash-extraction-tool-1.png" alt="Uploading a locked PDF to the hash extraction tool" width="700">
+  <img src="SCREENSHOTS/Screenshot%202026-08-28%20012523.png" alt="Uploading a locked PDF to the hash extraction tool" width="700">
 </p>
 
 <p align="center">
-  <img src="images/02-hash-extraction-tool-2.png" alt="Extracted PDF hash output" width="700">
+  <img src="SCREENSHOTS/Screenshot%202026-08-28%20012449.png" alt="Extracted PDF hash output" width="700">
 </p>
 
 The hash was verified to ensure that unnecessary characters were removed and that it was stored in the correct `$pdf$…` format for John the Ripper.
@@ -58,17 +58,17 @@ Before moving to the desktop tool, the extracted hash was tested against the Net
 The first attempt used the built-in 100-password list, which was insufficient:
 
 <p align="center">
-  <img src="images/03-dictionary-attack-inprogress.png" alt="Dictionary attack in progress — access denied with small wordlist" width="700">
+  <img src="SCREENSHOTS/Screenshot%202026-08-28%20012309.png" alt="Dictionary attack in progress — access denied with small wordlist" width="700">
 </p>
 
 <p align="center">
-  <img src="images/04-dictionary-attack-browser.png" alt="Full browser view of the dictionary attack lab" width="700">
+  <img src="SCREENSHOTS/Screenshot%20%28231%29.png" alt="Full browser view of the dictionary attack lab" width="700">
 </p>
 
 Loading a larger, more targeted wordlist (`fasttrack.txt`, 221 words) allowed the attack to succeed:
 
 <p align="center">
-  <img src="images/05-dictionary-attack-cracked.png" alt="Password cracked successfully — good-luck" width="700">
+  <img src="SCREENSHOTS/Screenshot%202026-08-28%20012140.png" alt="Password cracked successfully — good-luck" width="700">
 </p>
 
 This step reinforced a key lesson: **cracking success depends directly on wordlist quality and coverage**, not just raw attempt count.
@@ -78,7 +78,7 @@ This step reinforced a key lesson: **cracking success depends directly on wordli
 Johnny was installed and configured as the graphical interface for John the Ripper, pointed at the `john.exe` executable inside the John the Ripper (Jumbo) installation directory.
 
 <p align="center">
-  <img src="images/06-johnny-settings.png" alt="Johnny settings pointing to the John the Ripper executable" width="700">
+  <img src="SCREENSHOTS/Screenshot%202026-08-28%20011321.png" alt="Johnny settings pointing to the John the Ripper executable" width="700">
 </p>
 
 ### 4. Loading the Hash and Running the Attack
@@ -86,15 +86,15 @@ Johnny was installed and configured as the graphical interface for John the Ripp
 The extracted `$pdf$` hash was imported into Johnny, and a new password-cracking attack was started against several target PDFs. John the Ripper processed each hash and successfully recovered the original passwords:
 
 <p align="center">
-  <img src="images/07-johnny-cracked-password1.png" alt="Johnny — password1 cracked" width="700">
+  <img src="SCREENSHOTS/Screenshot%202026-08-28%20012056.png" alt="Johnny — password1 cracked" width="700">
 </p>
 
 <p align="center">
-  <img src="images/08-johnny-cracked-1qaz2wsx.png" alt="Johnny — 1qaz2wsx cracked" width="700">
+  <img src="SCREENSHOTS/Screenshot%202026-08-28%20011719.png" alt="Johnny — 1qaz2wsx cracked" width="700">
 </p>
 
 <p align="center">
-  <img src="images/09-johnny-cracked-goodluck.png" alt="Johnny — good-luck cracked" width="700">
+  <img src="SCREENSHOTS/Screenshot%202026-08-28%20011652.png" alt="Johnny — good-luck cracked" width="700">
 </p>
 
 Once each password was recovered, it was used to unlock the corresponding protected PDF.
@@ -104,13 +104,13 @@ Once each password was recovered, it was used to unlock the corresponding protec
 Successfully completing each stage of the lab returned a unique flag, confirming the exercise was completed correctly:
 
 <p align="center">
-  <img src="images/10-flag-persistence-jtr.png" alt="Flag captured: networkwalks_persistence_jtr" width="450">
+  <img src="SCREENSHOTS/Screenshot%202026-08-28%20013637.png" alt="Flag captured: networkwalks_persistence_jtr" width="450">
   &nbsp;&nbsp;
-  <img src="images/11-flag-captured-2.png" alt="Flag captured: networkwalks_flag" width="450">
+  <img src="SCREENSHOTS/Screenshot%202026-08-28%20013133.png" alt="Flag captured: networkwalks_flag" width="450">
 </p>
 
 <p align="center">
-  <img src="images/12-flag-captured-2.png" alt="Flag captured: cybersecurity_flag_captured" width="450">
+  <img src="SCREENSHOTS/Screenshot%202026-08-28%20012244.png" alt="Flag captured: cybersecurity_flag_captured" width="450">
 </p>
 
 ---
